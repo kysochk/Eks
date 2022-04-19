@@ -42,5 +42,10 @@ namespace Eks
             PageLoad.MainFrame.Navigate(new PageBooks());
 
         }
+
+        private void TextBlock_DragEnter(object sender, DragEventArgs e)
+        {
+
+        }
     }
 }
