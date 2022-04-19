@@ -42,7 +42,7 @@ namespace Eks
 
         private void Bascet_Click(object sender, RoutedEventArgs e)
         {
-            PageLoad.MainFrame.Navigate(new PageBasket());
+            MessageBox.Show("Ваша корзина пуста");
         }
     }
 }
