@@ -20,14 +20,27 @@ namespace Eks
     /// </summary>
     public partial class PageBasket : Page
     {
+        int index = 0;
         public PageBasket()
         {
             InitializeComponent();
+        }
+        public PageBasket(int i)
+
+        {
+            InitializeComponent();
+           
+            Books books = BaseConnect.BaseModel.Books.FirstOrDefault(x => x.Id_Book == i);
+
+            DataContext = books;
+            index = i;
+           
         }
 
         private void goback_Click(object sender, RoutedEventArgs e)
         {
             PageLoad.MainFrame.Navigate(new PageBooks());
+
         }
     }
 }

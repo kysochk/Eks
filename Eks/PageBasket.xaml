@@ -9,6 +9,67 @@
       Title="PageBasket">
 
     <Grid>
-        <Button x:Name="goback" Content="Вернуться назад" Click="goback_Click" Width="100px" Height="100px" />
+        <Border BorderBrush="Black" Width="825" BorderThickness="1">
+            <StackPanel Orientation="Horizontal" Width="814" HorizontalAlignment="Left" Margin="0.2,124.2,0,114.8">
+
+                <GroupBox >
+                    <StackPanel Orientation="Horizontal" Width="727" Margin="0,0,0,3.4" >
+
+                        <Image x:Name="Imagebook" Source="{Binding Image}" Width="200" Height="200" Margin="0,2,0,29" />
+
+
+
+                        <StackPanel Margin="10,36,0,9.8" Orientation="Vertical" Width="455" >
+
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock TextAlignment="Left" >
+                            <Run x:Name="Title" Text="Название:"/>
+                                            <Run Text="{Binding Title}"/>   
+                                            <Run Text="|"/>
+                           <Run  Text="Жанр:"/>
+                                <Run x:Name="Autor" Text="{Binding Genres.Type_Genre}"/>
+                                </TextBlock>
+                                <TextBlock TextAlignment="Left">
+                                        <Run x:Name="Author" Text="Автор:"/>
+                                        <Run Text="{Binding Author}"/>
+
+                                </TextBlock>
+                                <TextBlock TextAlignment="Left">
+                                        <Run x:Name="Cost" Text="Цена:"/>
+                                        <Run Text="{Binding Cost, StringFormat = {}{0:N2} }"/>
+
+                                </TextBlock>
+                                <TextBlock TextAlignment="Left">
+                                        <Run x:Name="SumStore" Text="Количество в магазине:"/>
+                                        <Run Text="{Binding Sum}"/>
+
+                                </TextBlock>
+                                <TextBlock TextAlignment="Left">
+                                        <Run x:Name="SumSkl" Text="Количество на складе:"/>
+                                        <Run Text="{Binding Sum1}"/>
+
+                                </TextBlock>
+                               
+                                    <TextBlock TextAlignment="Left" Height="100" Width="450" Margin="0,0,0.2,0">
+                                        <Run x:Name="Opis" Text="Описание:"/>
+                                        <Run Text="{Binding Description}"/>
+
+                                    </TextBlock>
+                               
+                                
+                            </StackPanel>
+
+
+
+
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+
+            </StackPanel>
+        </Border >
+
+        <Button x:Name="goback" Content="Вернуться назад" Height="20" Width="100"  Click="goback_Click"  Margin="612,288,78,111.6" />
+
     </Grid>
 </Page>

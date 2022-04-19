@@ -10,7 +10,7 @@
 
     <Page.Resources>
         <DataTemplate x:Key="ServiceItems">
-            <Border BorderBrush="Black" Width="825" BorderThickness="1">
+            <Border BorderBrush="#FFEAD4EE" Width="825" BorderThickness="1">
                 <StackPanel Orientation="Horizontal">
 
                     <GroupBox >
@@ -40,12 +40,12 @@
                                     </TextBlock>
                                     <TextBlock TextAlignment="Left">
                                         <Run x:Name="SumStore" Text="Количество в магазине:"/>
-                                        <Run Text="{Binding Sum_Store}"/>
+                                        <Run Text="{Binding Sum}"/>
 
                                     </TextBlock>
                                     <TextBlock TextAlignment="Left">
                                         <Run x:Name="SumSkl" Text="Количество на складе:"/>
-                                        <Run Text="{Binding Sum_Warehouse}"/>
+                                        <Run Text="{Binding Sum1}"/>
 
                                     </TextBlock>
                                     <TextBlock TextAlignment="Left">
@@ -58,7 +58,7 @@
 
 
                                     <StackPanel Orientation="Horizontal">
-                                    <Button x:Name="AddKorzine" Content="Добавить в корзину"  Uid="{Binding Id_service}" Click="AddKorzine_Click" Visibility="{Binding visiblebtn}" Margin="0 0 10 0"/>
+                                    <Button x:Name="AddKorzine" Content="Добавить в корзину"  Uid="{Binding Id_Book}" Click="AddKorzine_Click" Visibility="{Binding visiblebtn}" Margin="0 0 10 0"/>
                                    
                                 </StackPanel>
                             </StackPanel>
@@ -85,7 +85,9 @@
         <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
             <StackPanel Margin="0,0,0,0.4"/>
             <GroupBox Header="" Margin="0,0,0,0.4">
-                <StackPanel Orientation="Horizontal" />
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="700 0 0 0" Width="67">
+                    <Button x:Name="Bascet" Content="Корзина" Click="Bascet_Click" HorizontalAlignment="Right" Width="67" />
+                </StackPanel>
             </GroupBox>
             </StackPanel>
             <ListBox x:Name="BookList" ItemTemplate="{StaticResource ServiceItems}" Grid.Column="0" Grid.Row="1"/>

@@ -29,8 +29,18 @@ namespace Eks
             ls = load.books;
 
         }
+        
       
         private void AddKorzine_Click(object sender, RoutedEventArgs e)
+        {
+
+            Button btn = (Button)sender;
+            int id = Convert.ToInt32(btn.Uid);
+            PageLoad.MainFrame.Navigate(new PageBasket(id));
+
+        }
+
+        private void Bascet_Click(object sender, RoutedEventArgs e)
         {
             PageLoad.MainFrame.Navigate(new PageBasket());
         }
