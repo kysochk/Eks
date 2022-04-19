@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Eks"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageBasket">
+      Title="Добавление книги">
 
     <Grid>
         <Border BorderBrush="Black" Width="825" BorderThickness="1">
