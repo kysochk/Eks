@@ -16,16 +16,23 @@ using System.Windows.Shapes;
 namespace Eks
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для PageBooks.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageBooks : Page
     {
-        public MainWindow()
+        LoadList load = new LoadList();
+        List<Books> ls;
+        public PageBooks()
         {
             InitializeComponent();
-            BaseConnect.BaseModel = new Entities();//бд
-            PageLoad.MainFrame = FrameMain;//страницы
-            FrameMain.Navigate(new PageBooks());
+            BookList.ItemsSource = load.books;
+            ls = load.books;
+
+        }
+      
+        private void AddKorzine_Click(object sender, RoutedEventArgs e)
+        {
+            PageLoad.MainFrame.Navigate(new PageBasket());
         }
     }
 }

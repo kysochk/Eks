@@ -16,16 +16,18 @@ using System.Windows.Shapes;
 namespace Eks
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для PageBasket.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageBasket : Page
     {
-        public MainWindow()
+        public PageBasket()
         {
             InitializeComponent();
-            BaseConnect.BaseModel = new Entities();//бд
-            PageLoad.MainFrame = FrameMain;//страницы
-            FrameMain.Navigate(new PageBooks());
+        }
+
+        private void goback_Click(object sender, RoutedEventArgs e)
+        {
+            PageLoad.MainFrame.Navigate(new PageBooks());
         }
     }
 }
